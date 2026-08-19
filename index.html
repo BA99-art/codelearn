@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <a class="logo" onclick="home()">Code<span>Learn</span></a>
+
+    <input
+        id="search"
+        type="text"
+        placeholder="Search lessons..."
+        oninput="searchLessons()"
+    >
+
+    <button onclick="toggleDark()">🌙</button>
+</header>
+
+
+<div class="layout">
+
+    <aside id="sidebar"></aside>
+
+    <main id="app"></main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

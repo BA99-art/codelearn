@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: #04aa6d;
+    --dark: #282a35;
+    --bg: white;
+    --text: #222;
+    --side: #f1f1f1;
+    --card: white;
+    --border: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.dark {
+    --bg: #181818;
+    --text: #eee;
+    --side: #222;
+    --card: #292929;
+    --border: #444;
+}
+
+header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+header input {
+    width: 400px;
+    padding: 12px 15px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    outline: none;
+}
+
+header button {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.layout {
+    display: flex;
+}
+
+#sidebar {
+    width: 260px;
+    height: calc(100vh - 65px);
+    position: fixed;
+    overflow-y: auto;
+    background: var(--side);
+    border-right: 1px solid var(--border);
+    padding-bottom: 40px;
+}
+
+#sidebar h3 {
+    padding: 22px 18px 8px;
+}
+
+#sidebar button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 9px 18px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+#sidebar button:hover {
+    background: #ccc;
+}
+
+main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 50px;
+    max-width: 1200px;
+}
+
+.hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    opacity: .7;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.big-card {
+    padding: 45px 20px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.big-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.big-card span {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.big-card strong {
+    display: block;
+    font-size: 24px;
+}
+
+.lesson {
+    max-width: 850px;
+    margin: auto;
+}
+
+.label {
+    color: var(--green);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.lesson h1 {
+    font-size: 45px;
+    margin: 12px 0;
+}
+
+.lesson-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: .75;
+}
+
+.box {
+    background: var(--side);
+    border-left: 5px solid var(--green);
+    padding: 25px;
+    margin: 25px 0;
+    line-height: 1.7;
+}
+
+pre {
+    background: #282a35;
+    color: white;
+    padding: 22px;
+    border-radius: 8px;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.editor {
+    margin-top: 30px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    background: #1e1e1e;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+.run {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+    background: white;
+    border: 1px solid #aaa;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.nav button {
+    padding: 12px 22px;
+    border: none;
+    background: var(--green);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.about,
+.quiz {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-card,
+.question {
+    background: var(--side);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.score {
+    background: var(--green);
+    color: white;
+    padding: 18px;
+    border-radius: 8px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.answer:hover {
+    border-color: var(--green);
+}
+
+@media(max-width:700px) {
+
+    #sidebar {
+        width: 190px;
+    }
+
+    main {
+        margin-left: 190px;
+        width: calc(100% - 190px);
+        padding: 20px;
+    }
+
+    header input {
+        width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+}
