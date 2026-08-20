@@ -7,10 +7,10 @@
 :root {
     --green: #04aa6d;
     --dark: #282a35;
-    --bg: white;
+    --bg: #ffffff;
     --text: #222;
     --side: #f1f1f1;
-    --card: white;
+    --card: #ffffff;
     --border: #ddd;
 }
 
@@ -20,43 +20,40 @@ body {
     color: var(--text);
 }
 
-body.dark {
-    --bg: #181818;
-    --text: #eee;
-    --side: #222;
-    --card: #292929;
-    --border: #444;
-}
+/* ================= HEADER ================= */
 
 header {
     height: 65px;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     padding: 0 25px;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     background: var(--card);
     border-bottom: 1px solid var(--border);
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .logo span {
     color: var(--green);
 }
 
-header input {
+#search {
     width: 400px;
-    padding: 12px 15px;
+    max-width: 100%;
+    padding: 11px 15px;
     border: 1px solid #aaa;
-    border-radius: 7px;
+    border-radius: 8px;
     outline: none;
+    font-size: 15px;
 }
 
 header button {
@@ -67,14 +64,20 @@ header button {
     cursor: pointer;
 }
 
+/* ================= LAYOUT ================= */
+
 .layout {
     display: flex;
 }
 
+/* ================= SIDEBAR ================= */
+
 #sidebar {
-    width: 260px;
+    width: 270px;
     height: calc(100vh - 65px);
     position: fixed;
+    left: 0;
+    top: 65px;
     overflow-y: auto;
     background: var(--side);
     border-right: 1px solid var(--border);
@@ -82,38 +85,43 @@ header button {
 }
 
 #sidebar h3 {
-    padding: 22px 18px 8px;
+    padding: 20px 18px 8px;
+    font-size: 16px;
 }
 
 #sidebar button {
     width: 100%;
     border: none;
     background: transparent;
+    color: var(--text);
     text-align: left;
     padding: 9px 18px;
     cursor: pointer;
-    color: var(--text);
 }
 
 #sidebar button:hover {
     background: #ccc;
 }
 
+/* ================= MAIN ================= */
+
 main {
-    margin-left: 260px;
-    width: calc(100% - 260px);
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    min-width: 0;
     padding: 50px;
-    max-width: 1200px;
 }
 
+/* ================= HERO ================= */
+
 .hero {
-    text-align: center;
     max-width: 900px;
     margin: 60px auto;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: clamp(38px, 6vw, 60px);
     margin: 15px 0;
 }
 
@@ -123,15 +131,24 @@ main {
     opacity: .7;
 }
 
+.label {
+    color: var(--green);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ================= CARDS ================= */
+
 .buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .big-card {
-    padding: 45px 20px;
+    min-height: 210px;
+    padding: 35px 20px;
     border: 1px solid var(--border);
     background: var(--card);
     color: var(--text);
@@ -146,29 +163,31 @@ main {
 }
 
 .big-card span {
-    font-size: 45px;
     display: block;
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
 .big-card strong {
     display: block;
-    font-size: 24px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
+.big-card small {
+    opacity: .7;
+}
+
+/* ================= LESSON ================= */
+
 .lesson {
-    max-width: 850px;
+    width: 100%;
+    max-width: 900px;
     margin: auto;
 }
 
-.label {
-    color: var(--green);
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
 .lesson h1 {
-    font-size: 45px;
+    font-size: clamp(35px, 5vw, 48px);
     margin: 12px 0;
 }
 
@@ -178,13 +197,16 @@ main {
     opacity: .75;
 }
 
-.box {
+.info-box {
     background: var(--side);
     border-left: 5px solid var(--green);
     padding: 25px;
-    margin: 25px 0;
+    margin: 30px 0;
     line-height: 1.7;
+    border-radius: 5px;
 }
+
+/* ================= CODE ================= */
 
 pre {
     background: #282a35;
@@ -193,47 +215,53 @@ pre {
     border-radius: 8px;
     overflow-x: auto;
     line-height: 1.6;
-}
-
-.editor {
-    margin-top: 30px;
+    margin-top: 15px;
+    max-width: 100%;
 }
 
 textarea {
     width: 100%;
-    min-height: 200px;
+    min-height: 220px;
+    margin-top: 15px;
+    padding: 18px;
     background: #1e1e1e;
     color: white;
-    padding: 15px;
+    border: none;
     border-radius: 8px;
     font-family: monospace;
-}
-
-.run {
-    margin-top: 10px;
-    padding: 12px 25px;
-    background: var(--green);
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
+    resize: vertical;
 }
 
 iframe {
     width: 100%;
-    height: 250px;
+    height: 260px;
     margin-top: 15px;
     background: white;
     border: 1px solid #aaa;
+    border-radius: 8px;
 }
 
-.nav {
+/* ================= BUTTONS ================= */
+
+.run {
+    margin-top: 12px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    background: var(--green);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navigation {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
     margin-top: 40px;
 }
 
-.nav button {
+.navigation button {
     padding: 12px 22px;
     border: none;
     background: var(--green);
@@ -242,8 +270,11 @@ iframe {
     cursor: pointer;
 }
 
+/* ================= ABOUT / QUIZ ================= */
+
 .about,
 .quiz {
+    width: 100%;
     max-width: 850px;
     margin: auto;
 }
@@ -255,15 +286,6 @@ iframe {
     border-radius: 12px;
     margin-top: 25px;
     line-height: 1.8;
-}
-
-.score {
-    background: var(--green);
-    color: white;
-    padding: 18px;
-    border-radius: 8px;
-    margin: 25px 0;
-    font-weight: bold;
 }
 
 .answer {
@@ -279,31 +301,187 @@ iframe {
     text-align: left;
 }
 
-.answer:hover {
-    border-color: var(--green);
-}
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
 
-@media(max-width:700px) {
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    #search {
+        width: 250px;
+    }
 
     #sidebar {
-        width: 190px;
+        width: 220px;
     }
 
     main {
-        margin-left: 190px;
-        width: calc(100% - 190px);
-        padding: 20px;
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        padding: 30px 20px;
     }
 
-    header input {
-        width: 200px;
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================================= */
+/* PHONE */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        min-height: 65px;
+        padding: 10px 12px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    #search {
+        order: 3;
+        width: 100%;
+        height: 42px;
+    }
+
+    header button {
+        margin-left: auto;
+    }
+
+    /* Sidebar becomes horizontal */
+
+    #sidebar {
+        position: sticky;
+        top: 0;
+        left: auto;
+        width: 100%;
+        height: auto;
+        max-height: 180px;
+        overflow-y: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        z-index: 50;
+    }
+
+    #sidebar h3 {
+        padding: 12px 15px 5px;
+    }
+
+    #sidebar button {
+        display: inline-block;
+        width: auto;
+        padding: 8px 12px;
+        margin: 3px;
+        border-radius: 6px;
+        white-space: nowrap;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 25px 14px;
+    }
+
+    .hero {
+        margin: 30px auto;
     }
 
     .hero h1 {
         font-size: 38px;
     }
 
-    .buttons {
-        grid-template-columns: 1fr;
+    .hero p {
+        font-size: 16px;
     }
+
+    .big-card {
+        min-height: 170px;
+    }
+
+    .big-card strong {
+        font-size: 21px;
+    }
+
+    .lesson h1 {
+        font-size: 34px;
+    }
+
+    .lesson-intro {
+        font-size: 16px;
+    }
+
+    .info-box {
+        padding: 18px;
+    }
+
+    pre {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    textarea {
+        min-height: 180px;
+        font-size: 13px;
+    }
+
+    iframe {
+        height: 220px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation button {
+        width: 100%;
+    }
+
+    .about-card,
+    .question {
+        padding: 20px;
+    }
+}
+
+
+/* ================================================= */
+/* VERY SMALL PHONES */
+/* ================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .big-card {
+        padding: 25px 15px;
+    }
+
+    .big-card span {
+        font-size: 40px;
+    }
+
 }
