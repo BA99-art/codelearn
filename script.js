@@ -1,189 +1,174 @@
-/* =================================
-   CODELEARN
-   100+ LESSONS
-================================= */
-
-
-/* =================================
-   LESSON DATA
-================================= */
-
 const courses = {
 
-HTML: [
-["Introduction","تعرف على HTML ولشنوة نستعملوه.","<h1>Hello World!</h1>"],
-["Basic","البنية الأساسية لصفحة HTML.","<!DOCTYPE html>\n<html>\n<body>\n<h1>Hello</h1>\n</body>\n</html>"],
-["Elements","تعلم HTML Elements.","<h1>Title</h1>\n<p>Paragraph</p>"],
-["Attributes","تعلم HTML Attributes.","<a href='https://example.com'>Link</a>"],
-["Headings","العناوين من h1 إلى h6.","<h1>Heading 1</h1>\n<h2>Heading 2</h2>"],
-["Paragraphs","كيفاش تعمل paragraph.","<p>Hello World</p>"],
-["Styles","إضافة style داخل HTML.","<h1 style='color:red'>Hello</h1>"],
-["Formatting","Bold و italic و mark.","<b>Bold</b>\n<i>Italic</i>\n<mark>Mark</mark>"],
-["Comments","كيفاش تعمل comments.","<!-- Comment -->"],
-["Colors","الألوان في HTML.","<h1 style='color:blue'>Blue</h1>"],
-["Links","إنشاء الروابط.","<a href='#'>Click me</a>"],
-["Images","إضافة الصور.","<img src='https://via.placeholder.com/200'>"],
-["Lists","القوائم.","<ul><li>HTML</li><li>CSS</li></ul>"],
-["Tables","الجداول.","<table border='1'><tr><td>Hello</td></tr></table>"],
-["Forms","إنشاء Forms.","<form><input placeholder='Name'><button>Send</button></form>"],
-["Input Types","أنواع input.","<input type='text'>\n<input type='email'>\n<input type='number'>"],
-["Buttons","الأزرار.","<button>Click Me</button>"],
-["Classes","استعمال class.","<p class='title'>Hello</p>"],
-["IDs","استعمال id.","<h1 id='title'>Hello</h1>"],
-["Block & Inline","الفرق بين block و inline.","<div>Block</div><span>Inline</span>"],
-["Semantic HTML","HTML semantic elements.","<header>Header</header>\n<main>Main</main>\n<footer>Footer</footer>"],
-["Header","إنشاء Header.","<header>My Website</header>"],
-["Navigation","إنشاء navigation.","<nav><a href='#'>Home</a></nav>"],
-["Section","تنظيم الصفحة بـ section.","<section><h2>About</h2></section>"],
-["Article","استعمال article.","<article>My Article</article>"],
-["Footer","إنشاء Footer.","<footer>Copyright 2026</footer>"],
-["Audio","إضافة audio.","<audio controls></audio>"],
-["Video","إضافة video.","<video controls></video>"],
-["Iframes","عرض محتوى داخل iframe.","<iframe src='https://example.com'></iframe>"],
-["HTML Project","مشروع صفحة شخصية.","<h1>My Portfolio</h1>\n<p>Welcome!</p>"]
-],
+    HTML: [
+        ["Introduction", "Learn what HTML is and how websites are structured.", "<h1>Hello World!</h1>"],
+        ["Basic", "Learn the basic structure of an HTML document.", "<!DOCTYPE html>\n<html>\n<body>\n<h1>Hello</h1>\n</body>\n</html>"],
+        ["Elements", "Learn how HTML elements work.", "<h1>Title</h1>\n<p>Paragraph</p>"],
+        ["Attributes", "Learn how to add information to HTML elements.", "<a href='https://example.com'>Visit Website</a>"],
+        ["Headings", "Learn HTML headings from h1 to h6.", "<h1>Heading 1</h1>\n<h2>Heading 2</h2>"],
+        ["Paragraphs", "Learn how to create paragraphs.", "<p>This is a paragraph.</p>"],
+        ["Styles", "Learn how to add inline styles.", "<h1 style='color:red'>Hello</h1>"],
+        ["Formatting", "Learn bold, italic and highlighted text.", "<b>Bold</b>\n<i>Italic</i>\n<mark>Highlighted</mark>"],
+        ["Comments", "Learn how to write HTML comments.", "<!-- This is a comment -->"],
+        ["Colors", "Learn how to use colors in HTML.", "<h1 style='color:blue'>Blue Title</h1>"],
+        ["Links", "Learn how to create links.", "<a href='#'>Click Here</a>"],
+        ["Images", "Learn how to add images.", "<img src='https://via.placeholder.com/250'>"],
+        ["Lists", "Learn ordered and unordered lists.", "<ul>\n<li>HTML</li>\n<li>CSS</li>\n</ul>"],
+        ["Tables", "Learn how to create tables.", "<table border='1'>\n<tr><td>Hello</td></tr>\n</table>"],
+        ["Forms", "Learn how to create forms.", "<form>\n<input placeholder='Name'>\n<button>Submit</button>\n</form>"],
+        ["Input Types", "Learn different HTML input types.", "<input type='text'>\n<input type='email'>\n<input type='number'>"],
+        ["Buttons", "Learn how to create buttons.", "<button>Click Me</button>"],
+        ["Classes", "Learn how HTML classes work.", "<p class='title'>Hello</p>"],
+        ["IDs", "Learn how HTML IDs work.", "<h1 id='title'>Hello</h1>"],
+        ["Block and Inline", "Learn the difference between block and inline elements.", "<div>Block</div>\n<span>Inline</span>"],
+        ["Semantic HTML", "Learn semantic HTML elements.", "<header>Header</header>\n<main>Main</main>\n<footer>Footer</footer>"],
+        ["Header", "Learn how to create a website header.", "<header>My Website</header>"],
+        ["Navigation", "Learn how to create navigation menus.", "<nav><a href='#'>Home</a></nav>"],
+        ["Section", "Learn how to organize content with sections.", "<section><h2>About</h2></section>"],
+        ["Article", "Learn how to create articles.", "<article>My Article</article>"],
+        ["Footer", "Learn how to create a footer.", "<footer>Copyright 2026</footer>"],
+        ["Audio", "Learn how to add audio.", "<audio controls></audio>"],
+        ["Video", "Learn how to add video.", "<video controls></video>"],
+        ["Iframes", "Learn how to embed another webpage.", "<iframe src='https://example.com'></iframe>"],
+        ["HTML Project", "Build your first personal webpage.", "<h1>My Portfolio</h1>\n<p>Welcome to my website!</p>"]
+    ],
 
-CSS: [
-["Introduction","تعرف على CSS.","h1 { color: red; }"],
-["Syntax","CSS Syntax.","h1 {\n color: red;\n}"],
-["Selectors","CSS Selectors.","p { color: blue; }"],
-["Colors","CSS Colors.","h1 { color: purple; }"],
-["Backgrounds","Backgrounds.","body { background: lightblue; }"],
-["Borders","Borders.","div { border: 2px solid black; }"],
-["Margins","Margins.","div { margin: 20px; }"],
-["Padding","Padding.","div { padding: 20px; }"],
-["Width","Width و Height.","div { width: 300px; height: 100px; }"],
-["Box Model","CSS Box Model.","div { padding: 20px; border: 5px solid black; margin: 20px; }"],
-["Text","Text styling.","p { text-align: center; }"],
-["Fonts","Fonts.","p { font-size: 20px; font-weight: bold; }"],
-["Links","Styling links.","a { color: green; }"],
-["Lists","Styling lists.","ul { list-style: square; }"],
-["Display","Display property.","div { display: inline-block; }"],
-["Position","Position.","div { position: relative; left: 20px; }"],
-["Z-Index","Layering elements.","div { z-index: 5; }"],
-["Overflow","Overflow.","div { overflow: auto; }"],
-["Opacity","Opacity.","img { opacity: .5; }"],
-["Combinators","CSS combinators.","div p { color: red; }"],
-["Pseudo Classes","Hover وغيره.","button:hover { transform: scale(1.1); }"],
-["Pseudo Elements","Before و After.","p::before { content: '👉'; }"],
-["Flexbox","Flexbox basics.",".box { display: flex; justify-content: center; }"],
-["Flex Direction","Direction متاع Flex.",".box { display: flex; flex-direction: column; }"],
-["Flex Wrap","Flex wrapping.",".box { display: flex; flex-wrap: wrap; }"],
-["Grid","CSS Grid.",".box { display: grid; grid-template-columns: 1fr 1fr; }"],
-["Grid Columns","Grid columns.",".box { display: grid; grid-template-columns: repeat(3,1fr); }"],
-["Gap","المسافة بين العناصر.",".box { display: flex; gap: 20px; }"],
-["Variables","CSS Variables.",":root { --green: green; }"],
-["Shadows","Box shadow.","div { box-shadow: 0 5px 20px #888; }"],
-["Gradients","Gradients.","body { background: linear-gradient(red,blue); }"],
-["Transforms","Transform.","div { transform: rotate(10deg); }"],
-["Transitions","Transitions.","button { transition: .3s; }"],
-["Animations","Animations.","@keyframes move { from {left:0} to {left:100px} }"],
-["Media Queries","Responsive design.","@media(max-width:600px){ body{background:red;} }"],
-["Responsive Design","Sites تخدم على الهاتف.","img { max-width:100%; }"],
-["CSS Project","مشروع Landing Page.",".hero { text-align:center; padding:100px; }"]
-],
+    CSS: [
+        ["Introduction", "Learn what CSS is.", "h1 { color: red; }"],
+        ["Syntax", "Learn CSS syntax.", "h1 {\n    color: red;\n}"],
+        ["Selectors", "Learn how CSS selectors work.", "p { color: blue; }"],
+        ["Colors", "Learn CSS colors.", "h1 { color: purple; }"],
+        ["Backgrounds", "Learn CSS backgrounds.", "body { background: lightblue; }"],
+        ["Borders", "Learn how to create borders.", "div { border: 2px solid black; }"],
+        ["Margins", "Learn CSS margins.", "div { margin: 20px; }"],
+        ["Padding", "Learn CSS padding.", "div { padding: 20px; }"],
+        ["Width and Height", "Learn width and height.", "div {\n    width: 300px;\n    height: 100px;\n}"],
+        ["Box Model", "Learn the CSS box model.", "div {\n    padding: 20px;\n    border: 5px solid black;\n    margin: 20px;\n}"],
+        ["Text", "Learn how to style text.", "p {\n    text-align: center;\n}"],
+        ["Fonts", "Learn CSS fonts.", "p {\n    font-size: 20px;\n    font-weight: bold;\n}"],
+        ["Links", "Learn how to style links.", "a {\n    color: green;\n}"],
+        ["Lists", "Learn how to style lists.", "ul {\n    list-style: square;\n}"],
+        ["Display", "Learn the display property.", "div {\n    display: inline-block;\n}"],
+        ["Position", "Learn CSS positioning.", "div {\n    position: relative;\n    left: 20px;\n}"],
+        ["Z-Index", "Learn how layers work.", "div {\n    z-index: 5;\n}"],
+        ["Overflow", "Learn how overflow works.", "div {\n    overflow: auto;\n}"],
+        ["Opacity", "Learn transparency.", "img {\n    opacity: .5;\n}"],
+        ["Combinators", "Learn CSS combinators.", "div p {\n    color: red;\n}"],
+        ["Pseudo Classes", "Learn hover and other pseudo classes.", "button:hover {\n    transform: scale(1.1);\n}"],
+        ["Pseudo Elements", "Learn before and after.", "p::before {\n    content: '→';\n}"],
+        ["Flexbox", "Learn the basics of Flexbox.", ".box {\n    display: flex;\n    justify-content: center;\n}"],
+        ["Flex Direction", "Learn Flexbox directions.", ".box {\n    display: flex;\n    flex-direction: column;\n}"],
+        ["Flex Wrap", "Learn how Flexbox wrapping works.", ".box {\n    display: flex;\n    flex-wrap: wrap;\n}"],
+        ["Grid", "Learn CSS Grid.", ".box {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}"],
+        ["Grid Columns", "Learn grid columns.", ".box {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n}"],
+        ["Gap", "Learn spacing with gap.", ".box {\n    display: flex;\n    gap: 20px;\n}"],
+        ["Variables", "Learn CSS variables.", ":root {\n    --main-color: green;\n}"],
+        ["Shadows", "Learn box shadows.", "div {\n    box-shadow: 0 5px 20px #888;\n}"],
+        ["Gradients", "Learn CSS gradients.", "body {\n    background: linear-gradient(red, blue);\n}"],
+        ["Transforms", "Learn CSS transforms.", "div {\n    transform: rotate(10deg);\n}"],
+        ["Transitions", "Learn CSS transitions.", "button {\n    transition: .3s;\n}"],
+        ["Animations", "Learn CSS animations.", "@keyframes move {\n    from { left: 0; }\n    to { left: 100px; }\n}"],
+        ["Media Queries", "Learn responsive media queries.", "@media (max-width:600px) {\n    body { background:red; }\n}"],
+        ["Responsive Design", "Learn how to make websites responsive.", "img {\n    max-width: 100%;\n}"],
+        ["CSS Project", "Build a modern landing page.", ".hero {\n    text-align: center;\n    padding: 100px;\n}"]
+    ],
 
-JavaScript: [
-["Introduction","تعرف على JavaScript.","alert('Hello');"],
-["Syntax","JavaScript Syntax.","let name = 'Adam';"],
-["Comments","Comments.","// Hello"],
-["Variables","Variables.","let age = 17;"],
-["Let & Const","let و const.","let x = 5;\nconst y = 10;"],
-["Data Types","أنواع البيانات.","let name='Adam';\nlet age=17;\nlet ok=true;"],
-["Operators","Operators.","let x = 10 + 5;"],
-["Strings","Strings.","let name='Adam';\nconsole.log(name);"],
-["Numbers","Numbers.","let x = 10;\nconsole.log(x * 2);"],
-["Arrays","Arrays.","let skills=['HTML','CSS','JS'];"],
-["Array Methods","Array methods.","let x=[1,2,3];\nx.push(4);"],
-["Objects","Objects.","let user={name:'Adam',age:17};"],
-["Functions","Functions.","function hello(){ alert('Hello'); }\nhello();"],
-["Parameters","Function parameters.","function hello(name){ console.log(name); }"],
-["Return","Return values.","function add(a,b){ return a+b; }"],
-["If Else","Conditions.","if(age>=18){ console.log('Adult'); }"],
-["Switch","Switch.","switch(day){ case 1: console.log('Monday'); }"],
-["For Loop","For loop.","for(let i=0;i<5;i++){ console.log(i); }"],
-["While Loop","While loop.","let i=0;\nwhile(i<5){ i++; }"],
-["Break","Break loop.","for(let i=0;i<10;i++){ if(i==5) break; }"],
-["Continue","Continue.","for(let i=0;i<5;i++){ if(i==2) continue; }"],
-["Events","Events.","button.onclick=function(){ alert('Hi'); };"],
-["DOM","DOM.","document.getElementById('title');"],
-["Change HTML","تغيير HTML.","document.getElementById('title').innerHTML='Hi';"],
-["Change CSS","تغيير CSS.","document.body.style.background='red';"],
-["Forms","Forms.","document.querySelector('input').value;"],
-["Validation","Form validation.","if(name===''){ alert('Enter name'); }"],
-["Dates","Dates.","let d=new Date();"],
-["Math","Math.","console.log(Math.random());"],
-["JSON","JSON.","JSON.stringify({name:'Adam'});"],
-["Local Storage","LocalStorage.","localStorage.setItem('name','Adam');"],
-["Classes","Classes.","class User { constructor(name){this.name=name;} }"],
-["Modules","Modules.","export default hello;"],
-["Promises","Promises.","new Promise((resolve)=>resolve());"],
-["Async","Async functions.","async function hello(){}"],
-["Fetch","Fetch API.","fetch('https://example.com');"],
-["APIs","التعامل مع APIs.","fetch('/api/data');"],
-["JavaScript Project","مشروع To-Do List.","let tasks=[];\ntasks.push('Learn JS');"]
-],
+    JavaScript: [
+        ["Introduction", "Learn what JavaScript is.", "alert('Hello World');"],
+        ["Syntax", "Learn JavaScript syntax.", "let name = 'Adam';"],
+        ["Comments", "Learn JavaScript comments.", "// This is a comment"],
+        ["Variables", "Learn JavaScript variables.", "let age = 17;"],
+        ["Let and Const", "Learn let and const.", "let x = 5;\nconst y = 10;"],
+        ["Data Types", "Learn JavaScript data types.", "let name = 'Adam';\nlet age = 17;\nlet active = true;"],
+        ["Operators", "Learn JavaScript operators.", "let result = 10 + 5;"],
+        ["Strings", "Learn JavaScript strings.", "let name = 'Adam';\nconsole.log(name);"],
+        ["Numbers", "Learn JavaScript numbers.", "let x = 10;\nconsole.log(x * 2);"],
+        ["Arrays", "Learn JavaScript arrays.", "let skills = ['HTML', 'CSS', 'JS'];"],
+        ["Array Methods", "Learn array methods.", "let numbers = [1,2,3];\nnumbers.push(4);"],
+        ["Objects", "Learn JavaScript objects.", "let user = {\n    name: 'Adam',\n    age: 17\n};"],
+        ["Functions", "Learn how to create functions.", "function hello() {\n    alert('Hello');\n}\nhello();"],
+        ["Parameters", "Learn function parameters.", "function hello(name) {\n    console.log(name);\n}"],
+        ["Return", "Learn how functions return values.", "function add(a,b) {\n    return a + b;\n}"],
+        ["If Else", "Learn conditions.", "if (age >= 18) {\n    console.log('Adult');\n}"],
+        ["Switch", "Learn switch statements.", "switch(day) {\n    case 1:\n        console.log('Monday');\n}"],
+        ["For Loop", "Learn for loops.", "for(let i = 0; i < 5; i++) {\n    console.log(i);\n}"],
+        ["While Loop", "Learn while loops.", "let i = 0;\nwhile(i < 5) {\n    i++;\n}"],
+        ["Break", "Learn how to stop loops.", "for(let i=0;i<10;i++) {\n    if(i === 5) break;\n}"],
+        ["Continue", "Learn how to skip loop iterations.", "for(let i=0;i<5;i++) {\n    if(i === 2) continue;\n}"],
+        ["Events", "Learn JavaScript events.", "button.onclick = function() {\n    alert('Hello');\n};"],
+        ["DOM", "Learn the Document Object Model.", "document.getElementById('title');"],
+        ["Change HTML", "Learn how to change HTML.", "document.getElementById('title').innerHTML = 'Hello';"],
+        ["Change CSS", "Learn how to change CSS with JavaScript.", "document.body.style.background = 'red';"],
+        ["Forms", "Learn how to work with forms.", "document.querySelector('input').value;"],
+        ["Validation", "Learn basic form validation.", "if(name === '') {\n    alert('Enter your name');\n}"],
+        ["Dates", "Learn JavaScript dates.", "let date = new Date();"],
+        ["Math", "Learn JavaScript Math.", "console.log(Math.random());"],
+        ["JSON", "Learn how JSON works.", "JSON.stringify({name:'Adam'});"],
+        ["Local Storage", "Learn how to store data.", "localStorage.setItem('name','Adam');"],
+        ["Classes", "Learn JavaScript classes.", "class User {\n    constructor(name) {\n        this.name = name;\n    }\n}"],
+        ["Modules", "Learn JavaScript modules.", "export default hello;"],
+        ["Promises", "Learn promises.", "new Promise((resolve) => {\n    resolve();\n});"],
+        ["Async", "Learn async functions.", "async function hello() {\n    return 'Hello';\n}"],
+        ["Fetch", "Learn how to request data.", "fetch('https://example.com');"],
+        ["APIs", "Learn how APIs work.", "fetch('/api/data');"],
+        ["JavaScript Project", "Build a simple To-Do application.", "let tasks = [];\ntasks.push('Learn JavaScript');"]
+    ],
 
-Python: [
-["Introduction","تعرف على Python.","print('Hello World')"],
-["Syntax","Python syntax.","if 10 > 5:\n    print('Yes')"],
-["Variables","Variables.","name='Adam'\nage=17"],
-["Data Types","Data types.","name='Adam'\nage=17\nok=True"],
-["Numbers","Numbers.","x=10\ny=5\nprint(x+y)"],
-["Strings","Strings.","name='Adam'\nprint('Hello '+name)"],
-["Booleans","Boolean.","online=True"],
-["Operators","Operators.","x=10+5"],
-["Lists","Lists.","skills=['HTML','CSS','Python']"],
-["List Methods","List methods.","x=[1,2]\nx.append(3)"],
-["Tuples","Tuples.","x=('HTML','CSS')"],
-["Sets","Sets.","x={1,2,3}"],
-["Dictionaries","Dictionaries.","user={'name':'Adam','age':17}"],
-["If","If statement.","if age>=18:\n    print('Adult')"],
-["Elif","Elif.","if x>10:\n    print('Big')\nelif x==10:\n    print('Equal')"],
-["For Loop","For loop.","for i in range(5):\n    print(i)"],
-["While Loop","While loop.","i=0\nwhile i<5:\n    i+=1"],
-["Break","Break.","for i in range(10):\n    if i==5: break"],
-["Continue","Continue.","for i in range(5):\n    if i==2: continue"],
-["Functions","Functions.","def hello():\n    print('Hello')"],
-["Arguments","Function arguments.","def hello(name):\n    print(name)"],
-["Return","Return.","def add(a,b):\n    return a+b"],
-["Lambda","Lambda.","double=lambda x:x*2"],
-["Scope","Variable scope.","x=10"],
-["Modules","Modules.","import math\nprint(math.sqrt(25))"],
-["Random","Random module.","import random\nprint(random.randint(1,10))"],
-["Dates","Dates.","import datetime\nprint(datetime.datetime.now())"],
-["Files","Files.","file=open('test.txt','w')\nfile.write('Hello')\nfile.close()"],
-["Try Except","Errors.","try:\n    x=int('abc')\nexcept:\n    print('Error')"],
-["Classes","Classes.","class User:\n    pass"],
-["Objects","Objects.","class User:\n    def __init__(self,name):\n        self.name=name"],
-["Inheritance","Inheritance.","class Student(User):\n    pass"],
-["Iterators","Iterators.","x=iter([1,2,3])"],
-["Generators","Generators.","def numbers():\n    yield 1"],
-["JSON","JSON.","import json"],
-["Regex","Regular expressions.","import re"],
-["Virtual Environment","Python environments.","python -m venv env"],
-["Python Project","مشروع calculator.","def add(a,b):\n    return a+b"]
-]
-
+    Python: [
+        ["Introduction", "Learn what Python is.", "print('Hello World')"],
+        ["Syntax", "Learn Python syntax.", "if 10 > 5:\n    print('Yes')"],
+        ["Variables", "Learn Python variables.", "name = 'Adam'\nage = 17"],
+        ["Data Types", "Learn Python data types.", "name = 'Adam'\nage = 17\nactive = True"],
+        ["Numbers", "Learn Python numbers.", "x = 10\ny = 5\nprint(x + y)"],
+        ["Strings", "Learn Python strings.", "name = 'Adam'\nprint('Hello ' + name)"],
+        ["Booleans", "Learn Boolean values.", "online = True"],
+        ["Operators", "Learn Python operators.", "x = 10 + 5"],
+        ["Lists", "Learn Python lists.", "skills = ['HTML','CSS','Python']"],
+        ["List Methods", "Learn Python list methods.", "numbers = [1,2]\nnumbers.append(3)"],
+        ["Tuples", "Learn Python tuples.", "skills = ('HTML','CSS')"],
+        ["Sets", "Learn Python sets.", "numbers = {1,2,3}"],
+        ["Dictionaries", "Learn Python dictionaries.", "user = {'name':'Adam','age':17}"],
+        ["If", "Learn Python if statements.", "if age >= 18:\n    print('Adult')"],
+        ["Elif", "Learn elif statements.", "if x > 10:\n    print('Big')\nelif x == 10:\n    print('Equal')"],
+        ["For Loop", "Learn Python for loops.", "for i in range(5):\n    print(i)"],
+        ["While Loop", "Learn Python while loops.", "i = 0\nwhile i < 5:\n    i += 1"],
+        ["Break", "Learn break.", "for i in range(10):\n    if i == 5:\n        break"],
+        ["Continue", "Learn continue.", "for i in range(5):\n    if i == 2:\n        continue"],
+        ["Functions", "Learn Python functions.", "def hello():\n    print('Hello')"],
+        ["Arguments", "Learn function arguments.", "def hello(name):\n    print(name)"],
+        ["Return", "Learn return values.", "def add(a,b):\n    return a + b"],
+        ["Lambda", "Learn lambda functions.", "double = lambda x: x * 2"],
+        ["Scope", "Learn variable scope.", "x = 10"],
+        ["Modules", "Learn Python modules.", "import math\nprint(math.sqrt(25))"],
+        ["Random", "Learn the random module.", "import random\nprint(random.randint(1,10))"],
+        ["Dates", "Learn Python dates.", "import datetime\nprint(datetime.datetime.now())"],
+        ["Files", "Learn how to work with files.", "file = open('test.txt','w')\nfile.write('Hello')\nfile.close()"],
+        ["Try Except", "Learn error handling.", "try:\n    x = int('abc')\nexcept:\n    print('Error')"],
+        ["Classes", "Learn Python classes.", "class User:\n    pass"],
+        ["Objects", "Learn Python objects.", "class User:\n    def __init__(self,name):\n        self.name = name"],
+        ["Inheritance", "Learn class inheritance.", "class Student(User):\n    pass"],
+        ["Iterators", "Learn Python iterators.", "numbers = iter([1,2,3])"],
+        ["Generators", "Learn Python generators.", "def numbers():\n    yield 1"],
+        ["JSON", "Learn Python JSON.", "import json"],
+        ["Regular Expressions", "Learn regular expressions.", "import re"],
+        ["Virtual Environment", "Learn Python virtual environments.", "python -m venv env"],
+        ["Python Project", "Build a simple calculator.", "def add(a,b):\n    return a + b"]
+    ]
 };
 
-
-/* =================================
-   BUILD LESSONS
-================================= */
 
 let lessons = [];
 
 for (const language in courses) {
 
-    courses[language].forEach((item, index) => {
+    courses[language].forEach((lesson, index) => {
 
         lessons.push({
             id: `${language}-${index}`,
             language: language,
-            title: item[0],
-            description: item[1],
-            code: item[2]
+            title: lesson[0],
+            description: lesson[1],
+            code: lesson[2]
         });
 
     });
@@ -191,66 +176,45 @@ for (const language in courses) {
 }
 
 
-/* =================================
-   SIDEBAR
-================================= */
-
 function buildSidebar() {
 
-    const sidebar =
-        document.getElementById("sidebar");
+    const sidebar = document.getElementById("sidebar");
 
     sidebar.innerHTML = `
-        <button onclick="home()">🏠 Accueil</button>
-        <button onclick="about()">👤 À propos de moi</button>
-        <button onclick="startQuiz()">🎯 Défis & Score</button>
+        <button onclick="home()">🏠 Home</button>
+        <button onclick="about()">👤 About Me</button>
+        <button onclick="startQuiz()">🎯 Challenges</button>
     `;
 
     for (const language in courses) {
 
-        const title =
-            document.createElement("h3");
+        const heading = document.createElement("h3");
 
-        title.textContent =
-            language;
+        heading.textContent = language;
 
-        sidebar.appendChild(title);
+        sidebar.appendChild(heading);
 
-        courses[language].forEach(
-            (lesson, index) => {
+        courses[language].forEach((lesson, index) => {
 
-                const button =
-                    document.createElement("button");
+            const button = document.createElement("button");
 
-                button.textContent =
-                    `${index + 1}. ${lesson[0]}`;
+            button.textContent =
+                `${index + 1}. ${lesson[0]}`;
 
-                button.onclick = () => {
+            button.onclick = () => {
 
-                    const found =
-                        lessons.find(
-                            x =>
-                            x.language === language &&
-                            x.title === lesson[0]
-                        );
+                openLesson(`${language}-${index}`);
 
-                    openLesson(found.id);
+            };
 
-                };
+            sidebar.appendChild(button);
 
-                sidebar.appendChild(button);
-
-            }
-        );
+        });
 
     }
 
 }
 
-
-/* =================================
-   HOME
-================================= */
 
 function home() {
 
@@ -267,8 +231,8 @@ function home() {
             </h1>
 
             <p>
-                تعلم البرمجة بطريقة بسيطة وممتعة.
-                HTML, CSS, JavaScript و Python.
+                Learn HTML, CSS, JavaScript and Python
+                from beginner to advanced level.
             </p>
 
             <div class="buttons">
@@ -278,9 +242,8 @@ function home() {
                     onclick="startQuiz()"
                 >
                     <span>🎯</span>
-                    <strong>Défis & Score</strong>
-                    <br>
-                    اختبر معلوماتك
+                    <strong>Challenges & Score</strong>
+                    <small>Test your coding knowledge</small>
                 </button>
 
                 <button
@@ -288,9 +251,8 @@ function home() {
                     onclick="showCourses()"
                 >
                     <span>📚</span>
-                    <strong>Les Cours</strong>
-                    <br>
-                    أكثر من 100 درس
+                    <strong>Courses</strong>
+                    <small>Explore 100+ coding lessons</small>
                 </button>
 
             </div>
@@ -299,7 +261,7 @@ function home() {
                 class="run"
                 onclick="about()"
             >
-                👤 تعرف عليّ
+                👤 About Me
             </button>
 
         </section>
@@ -307,10 +269,6 @@ function home() {
 
 }
 
-
-/* =================================
-   COURSES
-================================= */
 
 function showCourses() {
 
@@ -323,12 +281,11 @@ function showCourses() {
             </div>
 
             <h1>
-                📚 Choose Your Course
+                Choose Your Course
             </h1>
 
             <p>
-                عندك أكثر من 100 درس
-                في 4 لغات برمجة.
+                Start learning with our coding courses.
             </p>
 
             <div class="buttons">
@@ -339,6 +296,7 @@ function showCourses() {
                 >
                     <span>🌐</span>
                     <strong>HTML</strong>
+                    <small>Build website structure</small>
                 </button>
 
                 <button
@@ -347,6 +305,7 @@ function showCourses() {
                 >
                     <span>🎨</span>
                     <strong>CSS</strong>
+                    <small>Design beautiful websites</small>
                 </button>
 
                 <button
@@ -355,6 +314,7 @@ function showCourses() {
                 >
                     <span>⚡</span>
                     <strong>JavaScript</strong>
+                    <small>Make websites interactive</small>
                 </button>
 
                 <button
@@ -363,6 +323,7 @@ function showCourses() {
                 >
                     <span>🐍</span>
                     <strong>Python</strong>
+                    <small>Learn programming</small>
                 </button>
 
             </div>
@@ -372,10 +333,6 @@ function showCourses() {
 
 }
 
-
-/* =================================
-   ABOUT
-================================= */
 
 function about() {
 
@@ -388,35 +345,33 @@ function about() {
             </div>
 
             <h1>
-                👋 Salut !
+                👋 Hello!
             </h1>
 
             <div class="about-card">
 
                 <h2>
-                    أنا آدم
+                    Welcome to CodeLearn
                 </h2>
 
                 <p>
-                    نحب البرمجة والتكنولوجيا
-                    ونعمل على تطوير مهاراتي
-                    في Web Development.
+                    My name is Adam. I am interested in
+                    programming, technology and web development.
                 </p>
 
                 <p>
-                    عملت CodeLearn باش نخلي
-                    تعلم البرمجة أسهل وأمتع،
-                    خاصة للمبتدئين.
+                    I created CodeLearn to make learning
+                    programming simple, organized and fun.
                 </p>
 
                 <p>
-                    🚀 HTML
-                    <br>
-                    🎨 CSS
-                    <br>
-                    ⚡ JavaScript
-                    <br>
-                    🐍 Python
+                    My main technologies are:
+                    HTML, CSS, JavaScript and Python.
+                </p>
+
+                <p>
+                    🚀 My goal is to build real projects
+                    and become a better developer.
                 </p>
 
             </div>
@@ -427,19 +382,13 @@ function about() {
 }
 
 
-/* =================================
-   OPEN LESSON
-================================= */
-
 function openLesson(id) {
 
-    const lesson =
-        lessons.find(x => x.id === id);
+    const lesson = lessons.find(x => x.id === id);
 
     if (!lesson) return;
 
-    const index =
-        lessons.indexOf(lesson);
+    const index = lessons.indexOf(lesson);
 
     document.getElementById("app").innerHTML = `
 
@@ -457,7 +406,8 @@ function openLesson(id) {
                 ${lesson.description}
             </p>
 
-            <div class="box">
+            <div class="info-box">
+
                 <strong>
                     📖 Explanation
                 </strong>
@@ -465,6 +415,7 @@ function openLesson(id) {
                 <br><br>
 
                 ${lesson.description}
+
             </div>
 
             <h2>
@@ -476,7 +427,7 @@ function openLesson(id) {
             <div class="editor">
 
                 <h2>
-                    🧪 Try it Yourself
+                    🧪 Try It Yourself
                 </h2>
 
                 <textarea id="editor">${lesson.code}</textarea>
@@ -492,17 +443,13 @@ function openLesson(id) {
 
             </div>
 
-            <div class="nav">
+            <div class="navigation">
 
-                <button
-                    onclick="previousLesson(${index})"
-                >
+                <button onclick="previousLesson(${index})">
                     ← Previous
                 </button>
 
-                <button
-                    onclick="nextLesson(${index})"
-                >
+                <button onclick="nextLesson(${index})">
                     Next →
                 </button>
 
@@ -511,58 +458,42 @@ function openLesson(id) {
         </article>
     `;
 
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
 }
 
-
-/* =================================
-   NEXT / PREVIOUS
-================================= */
 
 function nextLesson(index) {
 
     if (index < lessons.length - 1) {
 
-        openLesson(
-            lessons[index + 1].id
-        );
+        openLesson(lessons[index + 1].id);
 
     }
 
 }
+
 
 function previousLesson(index) {
 
     if (index > 0) {
 
-        openLesson(
-            lessons[index - 1].id
-        );
+        openLesson(lessons[index - 1].id);
 
     }
 
 }
 
-
-/* =================================
-   RUN
-================================= */
 
 function runCode() {
 
     const code =
         document.getElementById("editor").value;
 
-    document.getElementById("output").srcdoc =
-        code;
+    document.getElementById("output").srcdoc = code;
 
 }
 
-
-/* =================================
-   SEARCH
-================================= */
 
 function searchLessons() {
 
@@ -571,6 +502,13 @@ function searchLessons() {
         .value
         .toLowerCase();
 
+    if (!value) {
+
+        home();
+        return;
+
+    }
+
     const results =
         lessons.filter(lesson =>
             lesson.title
@@ -578,37 +516,44 @@ function searchLessons() {
             .includes(value)
         );
 
-    if (!value) return;
-
     document.getElementById("app").innerHTML = `
 
-        <h1>
-            🔎 Search results
-        </h1>
+        <section class="lesson">
 
-        <br>
+            <div class="label">
+                SEARCH
+            </div>
 
-        ${results.map(lesson => `
+            <h1>
+                Search Results
+            </h1>
 
-            <button
-                class="answer"
-                onclick="openLesson('${lesson.id}')"
-            >
-                ${lesson.language}
-                →
-                ${lesson.title}
-            </button>
+            <br>
 
-        `).join("")}
+            ${
+                results.length
+                ?
+                results.map(lesson => `
 
+                    <button
+                        class="search-result"
+                        onclick="openLesson('${lesson.id}')"
+                    >
+                        ${lesson.language}
+                        →
+                        ${lesson.title}
+                    </button>
+
+                `).join("")
+                :
+                "<p>No lessons found.</p>"
+            }
+
+        </section>
     `;
 
 }
 
-
-/* =================================
-   DARK MODE
-================================= */
 
 function toggleDark() {
 
@@ -617,41 +562,67 @@ function toggleDark() {
 }
 
 
-/* =================================
-   QUIZ
-================================= */
-
 const questions = [
 
-    ["HTML is used for?", 
-        ["Structure","Design","Database","Games"],0],
+    [
+        "What is HTML used for?",
+        ["Website structure", "Website design", "Databases", "Game development"],
+        0
+    ],
 
-    ["CSS is used for?",
-        ["Structure","Design","Database","Python"],1],
+    [
+        "What is CSS used for?",
+        ["Website structure", "Website design", "Databases", "Python"],
+        1
+    ],
 
-    ["JavaScript makes websites?",
-        ["Interactive","Blue","Offline","Smaller"],0],
+    [
+        "What makes websites interactive?",
+        ["HTML", "CSS", "JavaScript", "SQL"],
+        2
+    ],
 
-    ["Python uses which keyword for functions?",
-        ["function","def","func","create"],1],
+    [
+        "Which keyword creates a function in Python?",
+        ["function", "def", "func", "create"],
+        1
+    ],
 
-    ["HTML heading starts with?",
-        ["<h1>","<p>","<head>","<title>"],0],
+    [
+        "Which tag creates the largest HTML heading?",
+        ["<h1>", "<h6>", "<head>", "<title>"],
+        0
+    ],
 
-    ["CSS color property changes?",
-        ["Text color","Width","Height","Position"],0],
+    [
+        "Which CSS property changes text color?",
+        ["background", "color", "font", "text"],
+        1
+    ],
 
-    ["JavaScript variable can use?",
-        ["let","make","variable","newvar"],0],
+    [
+        "Which keyword creates a JavaScript variable?",
+        ["let", "make", "variable", "create"],
+        0
+    ],
 
-    ["Python list uses?",
-        ["[]","{}","()","<>"],0],
+    [
+        "Which brackets create a Python list?",
+        ["()", "[]", "{}", "<>"],
+        1
+    ],
 
-    ["CSS Flexbox starts with?",
-        ["display:flex","flex:on","box:flex","display:box"],0],
+    [
+        "Which CSS layout system is used for rows and columns?",
+        ["Flexbox", "Grid", "Float", "Position"],
+        1
+    ],
 
-    ["JavaScript arrays store?",
-        ["Multiple values","Only text","Only numbers","CSS"],0]
+    [
+        "What can a JavaScript array store?",
+        ["Multiple values", "Only text", "Only numbers", "CSS"],
+        0
+    ]
 
 ];
 
@@ -659,10 +630,6 @@ const questions = [
 let questionIndex = 0;
 let score = 0;
 
-
-/* =================================
-   QUIZ START
-================================= */
 
 function startQuiz() {
 
@@ -676,7 +643,7 @@ function startQuiz() {
 
 function showQuestion() {
 
-    const q =
+    const question =
         questions[questionIndex];
 
     document.getElementById("app").innerHTML = `
@@ -688,58 +655,52 @@ function showQuestion() {
             </div>
 
             <h1>
-                🎯 Challenge
+                🎯 Coding Challenge
             </h1>
 
             <div class="score">
-                Score:
-                ${score}/10
+                Score: ${score}/10
             </div>
 
             <div class="question">
 
                 <h2>
-                    ${questionIndex + 1}/10
+                    Question ${questionIndex + 1}/10
                 </h2>
 
                 <p>
-                    ${q[0]}
+                    ${question[0]}
                 </p>
 
                 <br>
 
-                ${q[1].map(
-                    (answer,index) => `
+                ${
+                    question[1].map((answer, index) => `
 
-                    <button
-                        class="answer"
-                        onclick="answer(${index})"
-                    >
-                        ${answer}
-                    </button>
+                        <button
+                            class="answer"
+                            onclick="answerQuestion(${index})"
+                        >
+                            ${answer}
+                        </button>
 
-                `
-                ).join("")}
+                    `).join("")
+                }
 
             </div>
 
         </section>
-
     `;
 
 }
 
 
-/* =================================
-   ANSWER
-================================= */
-
-function answer(index) {
+function answerQuestion(answer) {
 
     const correct =
         questions[questionIndex][2];
 
-    if (index === correct) {
+    if (answer === correct) {
 
         score++;
 
@@ -747,10 +708,7 @@ function answer(index) {
 
     questionIndex++;
 
-    if (
-        questionIndex >=
-        questions.length
-    ) {
+    if (questionIndex >= questions.length) {
 
         showResult();
 
@@ -763,32 +721,27 @@ function answer(index) {
 }
 
 
-/* =================================
-   RESULT
-================================= */
-
 function showResult() {
 
     let message;
 
     if (score >= 9) {
 
-        message = "🔥 Excellent !";
+        message = "🔥 Excellent work!";
 
     } else if (score >= 7) {
 
-        message = "👏 Très bien !";
+        message = "👏 Very good!";
 
     } else if (score >= 5) {
 
-        message = "👍 Pas mal !";
+        message = "👍 Good job!";
 
     } else {
 
-        message = "💪 Continue à apprendre !";
+        message = "💪 Keep learning!";
 
     }
-
 
     document.getElementById("app").innerHTML = `
 
@@ -803,8 +756,7 @@ function showResult() {
             </h1>
 
             <div class="score">
-                Score final:
-                ${score}/10
+                Final Score: ${score}/10
             </div>
 
             <button
@@ -822,29 +774,20 @@ function showResult() {
             </button>
 
         </section>
-
     `;
 
 }
 
 
-/* =================================
-   ESCAPE
-================================= */
-
 function escapeHTML(text) {
 
     return text
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;");
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
 }
 
-
-/* =================================
-   START
-================================= */
 
 buildSidebar();
 home();
